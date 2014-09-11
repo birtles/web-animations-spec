@@ -7,7 +7,7 @@ env:
     - TRAVIS_COMMIT_MSG="$(git log --format=%B --no-merges -n 1)"
 
 install:
-  - ./build/setup-bikeshed.py
+  - ./build/setup-bikeshed.sh
 
 script:
   - grunt build
