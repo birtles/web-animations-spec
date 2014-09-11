@@ -6,8 +6,12 @@ env:
   global:
     - TRAVIS_COMMIT_MSG="$(git log --format=%B --no-merges -n 1)"
 
+before_install:
+  - npm install -g grunt-cli
+
 install:
   - ./build/setup-bikeshed.sh
+  - npm install
 
 script:
   - grunt build
