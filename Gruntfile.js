@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       options: {
         stdout: true
       },
-      command: 'bikeshed.py spec Overview.src.html'
+      command: 'bikeshed spec Overview.src.html'
     },
     update: {
       options: {
