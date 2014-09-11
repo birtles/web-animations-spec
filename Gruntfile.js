@@ -1,41 +1,47 @@
 module.exports = function(grunt) {
   var port = grunt.option('port') || 8000;
 
-  grunt.initConfig({
-    shell: {
-      build: {
-        options: {
-          stdout: true
-        },
-        command: 'bikeshed.py spec Overview.src.html'
-      },
-      update: {
-        options: {
-          stdout: true
-        },
-        command: 'bikeshed.py update'
-      }
-    },
+  grunt.initConfig({});
 
-    watch: {
+  grunt.loadNpmTasks('grunt-shell');
+  grunt.config('shell', {
+    build: {
       options: {
-        livereload: true,
+        stdout: true
       },
-      files: [ 'Overview.src.html', 'biblio.json' ],
-      tasks: 'default'
+      command: 'bikeshed.py spec Overview.src.html'
     },
+    update: {
+      options: {
+        stdout: true
+      },
+      command: 'bikeshed.py update'
+    }
+  });
 
-    express: {
-      all: {
-        options: {
-          bases: [ '.' ],
-          port: port,
-          hostname: 'localhost',
-          livereload: true
-        }
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.config('watch', {
+    options: {
+      livereload: true,
+    },
+    files: [ 'Overview.src.html', 'biblio.json' ],
+    tasks: 'default'
+  });
+
+  grunt.loadNpmTasks('grunt-express');
+  grunt.config('express', {
+    all: {
+      options: {
+        bases: [ '.' ],
+        port: port,
+        hostname: 'localhost',
+        livereload: true
       }
-    },
+    }
+  });
 
+  grunt.loadNpmTasks('grunt-open');
+  grunt.config('open', {
     open: {
       all: {
         path: 'http://localhost:' + port + '/Overview.html'
@@ -43,15 +49,10 @@ module.exports = function(grunt) {
     },
   });
 
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-express');
-  grunt.loadNpmTasks('grunt-open');
-  grunt.loadNpmTasks('grunt-shell');
-
   grunt.registerTask('default', ['shell:build']);
-  grunt.registerTask('edit', [ 'shell:update',
-                               'shell:build',
-                               'express',
-                               'open',
-                               'watch']);
+  grunt.registerTask('build', ['shell:build']);
+  grunt.registerTask('live-edit', [ 'shell:build',
+                                    'express',
+                                    'open',
+                                    'watch']);
 };
