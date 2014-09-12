@@ -58,9 +58,23 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-gh-pages');
+  grunt.config('gh-pages', {
+    spec: {
+      options: {
+        base: 'publish',
+        /* When run from Travis, this message is overridden
+         * with the title of the latest commit message */
+        message: 'Auto-update of spec'
+      },
+      src: ['**/*']
+    }
+  });
+
   grunt.registerTask('default', ['shell:build']);
   grunt.registerTask('build', ['shell:build']);
   grunt.registerTask('publish', ['copy:spec']);
+  grunt.registerTask('upload', ['gh-pages:spec']);
   grunt.registerTask('live-edit', [ 'shell:build',
                                     'express',
                                     'open',
