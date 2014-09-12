@@ -49,8 +49,18 @@ module.exports = function(grunt) {
     },
   });
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.config('copy', {
+    spec: {
+      nonull: true, /* error if we haven't build the spec yet */
+      src: [ 'Overview.html', '*.css', 'img/*', 'MathJax/*' ] ,
+      dest: 'publish/',
+    }
+  });
+
   grunt.registerTask('default', ['shell:build']);
   grunt.registerTask('build', ['shell:build']);
+  grunt.registerTask('publish', ['copy:spec']);
   grunt.registerTask('live-edit', [ 'shell:build',
                                     'express',
                                     'open',
