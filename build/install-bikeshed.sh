@@ -11,9 +11,7 @@ sudo apt-get install python2.7 python-dev python-pip libxslt1-dev libxml2-dev ||
 sudo pip install lxml || error_exit "Error installing pip libxml"
 sudo pip install lxml --upgrade || error_exit "Error upgrading libxml"
 
-pwd
-cd ../..
-pwd
+cd ..
 
 echo "Cloning and installing bikeshed..."
 git clone https://github.com/tabatkins/bikeshed.git bikeshed || error_exit "Error cloning bikeshed"
