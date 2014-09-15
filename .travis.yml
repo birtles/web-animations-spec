@@ -5,8 +5,6 @@ node_js:
 env:
   global:
     - TRAVIS_COMMIT_MSG="$(git log --format=%B --no-merges -n 1)"
-    - GIT_USER=webanimbot
-    - GIT_EMAIL=webanimbot@gmail.com
 
 install:
   - ./build/install-bikeshed.sh

@@ -71,22 +71,6 @@ module.exports = function(grunt) {
     }
   });
 
-  /* For Travis, allow setting the git user via environment variables */
-  if (process.env.GIT_USER) {
-    grunt.config.merge({
-      'gh-pages': {
-        spec: {
-          options: {
-            user: {
-              name: process.env.GIT_USER,
-              email: process.env.GIT_EMAIL
-            }
-          }
-        }
-      }
-    });
-  }
-
   grunt.registerTask('default', ['shell:build']);
   grunt.registerTask('build', ['shell:build']);
   grunt.registerTask('publish', ['copy:spec']);
