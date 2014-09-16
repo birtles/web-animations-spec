@@ -14,5 +14,9 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; th
   git config --global user.name "$COMMIT_USER (via Travis CI)"
   git config --global user.email "$COMMIT_EMAIL"
 
-  grunt upload --gh-pages-message '$TRAVIS_COMMIT_MSG' || "Error uploading to gh-pages branch"
+  export COMMIT_MESSAGE=$(echo -e "$TRAVIS_COMMIT_MESSAGE\n\nGenerated from:\n";
+                          git log $TRAVIS_COMMIT_RANGE)
+  echo "$COMMIT_MESSAGE"
+
+  grunt upload || "Error uploading to gh-pages branch"
 fi

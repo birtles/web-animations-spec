@@ -14,5 +14,4 @@ env:
   - TRAVIS_COMMIT_MSG="$(git log --format=%B --no-merges -n 1)"
   - COMMIT_USER="$(git log --format=%an --no-merges -n 1)"
   - COMMIT_EMAIL="$(git log --format=%ae --no-merges -n 1)"
-  - COMMIT_MESSAGE="$TRAVIS_COMMIT_MESSAGE\n\nGenerated from:\n\n$(git log $TRAVIS_COMMIT_RANGE)"
   - secure: BfAzxrwYFEynNdUnv0QfMUauvTvWpNY2YDi2VAa/kgF78kU5DotTfsxCPqqINRQo+Itsqcea5Y+3Gv3+iGyhGhE1BTDVPTqF48rnWfTBz/lidKydxxho0OO3ueeZXON/mYfeR5H9XTaqtglNtW+OFW1i6dGG11Sz1RWDjuZuAHo=

@@ -63,8 +63,6 @@ module.exports = function(grunt) {
     spec: {
       options: {
         base: 'publish',
-        /* When run from Travis, this message is overridden
-         * with the title of the latest commit message */
         message: process.env.COMMIT_MESSAGE || 'Auto-update of spec'
       },
       src: ['**/*']
