@@ -17,7 +17,7 @@
 </p>
   <h1 class="p-name no-ref" id=title>Web Animations</h1>
   <h2 class="no-num no-toc no-ref heading settled" id=subtitle><span class=content>Editor’s Draft,
-    <span class=dt-updated><span class=value-title title=20140912>12 September 2014</span></span></span></h2>
+    <span class=dt-updated><span class=value-title title=20140916>16 September 2014</span></span></span></h2>
   <div data-fill-with=spec-metadata><dl>
 	<dt>This version:
 	<dd><a class=u-url href=http://dev.w3.org/fxtf/web-animations/>http://dev.w3.org/fxtf/web-animations/</a>
@@ -375,7 +375,7 @@ the Web Animations model, the dependency between SVG and SMIL
 Animation can be removed.</p>
 
 <p>As with Timing control for script-based animations (commonly referred
-to as “requestAnimationFrame”) <a data-biblio-type=informative data-link-type=biblio href=#animation-timing title=biblio-ANIMATION-TIMING>[ANIMATION-TIMING]</a>,
+to as “requestAnimationFrame”) <a data-biblio-type=informative data-link-type=biblio href=#biblio-animation-timing title=ANIMATION-TIMING>[ANIMATION-TIMING]</a>,
 the programming interface component of this specification allows
 animations to be created from script.
 The animations created using the interface defined in this
@@ -387,7 +387,7 @@ from script in a simpler and more performant manner.</p>
 
 <p>The time values used within the programming interface
 correspond with those used in Timing control for script-based
-animations <a data-biblio-type=informative data-link-type=biblio href=#animation-timing title=biblio-ANIMATION-TIMING>[ANIMATION-TIMING]</a> and their execution order to defined
+animations <a data-biblio-type=informative data-link-type=biblio href=#biblio-animation-timing title=ANIMATION-TIMING>[ANIMATION-TIMING]</a> and their execution order to defined
 such that the two interfaces can be used simultaneously without conflict.</p>
 
 <p>The programming interface component of this specification makes
@@ -633,7 +633,7 @@ timeline<a class=self-link href=#document-timeline></a></dfn>.
 The <a data-link-type=dfn href=#time-value title="time values">time values</a> of the <a data-link-type=dfn href=#document-timeline title="document timeline">document timeline</a> are calculated
 as a fixed offset from the <a data-link-type=dfn href=#global-clock title="global clock">global clock</a> such that the <a data-link-type=dfn href=#zero-time title="zero time">zero
 time</a> corresponds to the <a href=http://www.w3.org/TR/navigation-timing/#dom-performancetiming-navigationstart>
-<code>navigationStart</code></a> moment <a data-biblio-type=normative data-link-type=biblio href=#navigation-timing title=biblio-NAVIGATION-TIMING>[NAVIGATION-TIMING]</a>.
+<code>navigationStart</code></a> moment <a data-biblio-type=normative data-link-type=biblio href=#biblio-navigation-timing title=NAVIGATION-TIMING>[NAVIGATION-TIMING]</a>.
 Prior to this moment, the <a data-link-type=dfn href=#document-timeline title="document timeline">document timeline</a> is
 <a data-link-type=dfn href=#inactive-timeline title="inactive timeline">inactive</a>.</p>
 
@@ -650,7 +650,7 @@ relative to the <code>navigationStart</code> time,
 <code>document.timeline.currentTime</code> will roughly correspond to
 <a href=http://www.w3.org/TR/hr-time/#dom-performance-now>
 <code>Performance.now()</code></a>
-<a data-biblio-type=informative data-link-type=biblio href=#hr-time title=biblio-HR-TIME>[HR-TIME]</a> with the exception that
+<a data-biblio-type=informative data-link-type=biblio href=#biblio-hr-time title=HR-TIME>[HR-TIME]</a> with the exception that
 <code>document.timeline.currentTime</code> does not change within
 a script execution block as defined in <a data-section="" href=#script-execution-and-live-updates-to-the-model>§5.25 Script execution and live updates to the model</a>.</p>
 
@@ -1151,7 +1151,7 @@ If such players are able to play in reverse, they typically stop
 playing when they reach the beginning of their media.
 In order to emulate this behavior and to provide consistency
 with HTML’s <a href=http://www.w3.org/TR/html5/embedded-content-0.html#media-elements>media
-elements</a> <a data-biblio-type=informative data-link-type=biblio href=#html5 title=biblio-HTML5>[HTML5]</a>, the <a data-link-type=dfn href=#current-time title="current time">current time</a> of Web Animations'
+elements</a> <a data-biblio-type=informative data-link-type=biblio href=#biblio-html5 title=HTML5>[HTML5]</a>, the <a data-link-type=dfn href=#current-time title="current time">current time</a> of Web Animations'
 players do not play forwards beyond the <a data-link-type=dfn href=#end-time title="end time">end time</a> of their
 <a data-link-type=dfn href=#source-content title="source content">source content</a> or play backwards past time zero.</p>
 
@@ -1451,8 +1451,8 @@ is no longer changing.</p>
 <dt data-md=""><p><dfn data-dfn-type=dfn data-noexport="" id=finished-play-state title="finished play state">finished<a class=self-link href=#finished-play-state></a></dfn></p>
 <dd data-md=""><p>The player has reached the natural boundary of its playback range
 and the <a data-link-type=dfn href=#current-time title="current time">current time</a> is no longer updating.</p>
-</dl>
 
+</dl>
 <p>The <a data-link-type=dfn href=#play-state title="play state">play state</a> of <a data-link-type=dfn href=#player title=player>player</a>, <var>player</var>, at a given
 moment is the state corresponding to the <em>first</em> matching
 condition from the following:</p>
@@ -2653,10 +2653,10 @@ The x coordinates of <var>P1</var> and <var>P2</var> are
 restricted to the range [0, 1].</p>
 
 <p>The evaluation of this curve is covered in many sources such as
-<a data-biblio-type=informative data-link-type=biblio href=#fund-comp-graphics title=biblio-FUND-COMP-GRAPHICS>[FUND-COMP-GRAPHICS]</a>.</p>
+<a data-biblio-type=informative data-link-type=biblio href=#biblio-fund-comp-graphics title=FUND-COMP-GRAPHICS>[FUND-COMP-GRAPHICS]</a>.</p>
 
 <p>A <a data-link-type=dfn href=#cubic-bzier-timing-function title="cubic Bézier timing function">cubic Bézier timing function</a> may be specified as a string
-using the following syntax (using notation from <a data-biblio-type=normative data-link-type=biblio href=#css3val title=biblio-CSS3VAL>[CSS3VAL]</a>):
+using the following syntax (using notation from <a data-biblio-type=normative data-link-type=biblio href=#biblio-css3val title=CSS3VAL>[CSS3VAL]</a>):
 <blockquote>
   <div class=production><dfn class=css data-dfn-type=type data-export="" id=typedef-cubic-bezier-timing-function>&lt;cubic-bezier-timing-function&gt;<a class=self-link href=#typedef-cubic-bezier-timing-function></a></dfn> =
     ease | ease-in | ease-out | ease-in-out |
@@ -2814,8 +2814,8 @@ zero.</p>
 <p class=note>Note: This clarification is needed since the <a data-link-type=dfn href=#iteration-duration title="iteration duration">iteration duration</a>
     may be infinity and the result of infinity multiplied by zero is
     undefined according to IEEE 754-2008.</p>
-</ol>
 
+</ol>
 <h3 class="heading settled" data-level=3.13 id=grouping-and-synchronization><span class=secno>3.13 </span><span class=content>Grouping and synchronization</span><a class=self-link href=#grouping-and-synchronization></a></h3>
 
 <div class=informative-bg><em>This section is non-normative</em>
@@ -2857,7 +2857,7 @@ node</a> as the <a data-link-type=dfn href=#child-animation-node title="child an
 <p>By nesting <a data-link-type=dfn href=#animation-group title="animation groups">animation groups</a> it is possible to create hierarchical
 tree structures.
 The following terms are used to describe the parts and properties of
-such structures and are defined in <a data-biblio-type=normative data-link-type=biblio href=#dom title=biblio-DOM>[DOM]</a>:</p>
+such structures and are defined in <a data-biblio-type=normative data-link-type=biblio href=#biblio-dom title=DOM>[DOM]</a>:</p>
 
 <ul><li data-md=""><p><dfn data-dfn-type=dfn data-noexport="" id=tree-order><a href=http://www.w3.org/TR/dom/#concept-tree-order>
 tree order</a><a class=self-link href=#tree-order></a></dfn></p>
@@ -3130,7 +3130,7 @@ zero.</p>
 <p><dfn data-dfn-type=dfn data-noexport="" id=animation title=animation>Animations<a class=self-link href=#animation></a></dfn> are a kind of <a data-link-type=dfn href=#animation-node title="animation node">animation
 node</a> that apply an <a data-link-type=dfn href=#animation-effect title="animation effect">animation effect</a> or a <a data-link-type=dfn href=#custom-effect title="custom effect">custom effect</a>
 to an element or pseudo-element such as <code>::before</code> or
-<code>::after</code> <a data-biblio-type=normative data-link-type=biblio href=#select title=biblio-SELECT>[SELECT]</a> referred to as the <dfn data-dfn-type=dfn data-noexport="" id=animation-target>animation
+<code>::after</code> <a data-biblio-type=normative data-link-type=biblio href=#biblio-select title=SELECT>[SELECT]</a> referred to as the <dfn data-dfn-type=dfn data-noexport="" id=animation-target>animation
 target<a class=self-link href=#animation-target></a></dfn>.</p>
 
 <h4 class="heading settled" data-level=3.14.1 id=calculating-the-time-fraction><span class=secno>3.14.1 </span><span class=content>Calculating the time fraction</span><a class=self-link href=#calculating-the-time-fraction></a></h4>
@@ -3219,7 +3219,7 @@ refer to to the CSS property.</p>
 
 <p class=note>Note: If there ever exists a situation where we need to animate an attribute
       with the same name as a property (other than a <a href=http://www.w3.org/TR/SVG2/intro.html#TermPresentationAttribute>presentation
-      attribute</a> <a data-biblio-type=informative data-link-type=biblio href=#svg2 title=biblio-SVG2>[SVG2]</a>) then we will need to introduce
+      attribute</a> <a data-biblio-type=informative data-link-type=biblio href=#biblio-svg2 title=SVG2>[SVG2]</a>) then we will need to introduce
       a disambiguation strategy. Generally, however, such naming should be
       avoided.</p>
 
@@ -3306,7 +3306,7 @@ behavior<a class=self-link href=#animation-behavior></a></dfn>.</p>
 
 <p>The <a data-link-type=dfn href=#animation-behavior title="animation behavior">animation behavior</a> of CSS properties is defined by the
 "Animatable:" line in the summary of the property’s definition or in
-<a data-biblio-type=informative data-link-type=biblio href=#css3-transitions title=biblio-CSS3-TRANSITIONS>[CSS3-TRANSITIONS]</a> for properties that lack a such a line.</p>
+<a data-biblio-type=informative data-link-type=biblio href=#biblio-css3-transitions title=CSS3-TRANSITIONS>[CSS3-TRANSITIONS]</a> for properties that lack a such a line.</p>
 
 <p class=issue id=issue-48287af4><a class=self-link href=#issue-48287af4></a>The default <a data-link-type=dfn href=#animation-behavior title="animation behavior">animation behavior</a> for CSS properties is "as
        string".  Should this be defined here or in CSS Animations Level 4?</p>
@@ -3318,7 +3318,7 @@ default <a data-link-type=dfn href=#animation-behavior title="animation behavior
 animatable</a>”.</p>
 
 <p>Following is a series of pre-defined <a data-link-type=dfn href=#animation-behavior title="animation behaviors">animation behaviors</a>.
-<a data-biblio-type=informative data-link-type=biblio href=#css3-transitions title=biblio-CSS3-TRANSITIONS>[CSS3-TRANSITIONS]</a> provides further CSS-specific <a data-link-type=dfn href=#animation-behavior title="animation behaviors">animation
+<a data-biblio-type=informative data-link-type=biblio href=#biblio-css3-transitions title=CSS3-TRANSITIONS>[CSS3-TRANSITIONS]</a> provides further CSS-specific <a data-link-type=dfn href=#animation-behavior title="animation behaviors">animation
 behaviors</a>.</p>
 
 <p>For <a data-link-type=dfn href=#animation-behavior title="animation behaviors">animation behaviors</a> that do not define a specific procedure
@@ -3420,15 +3420,15 @@ percentage, or calc<a class=self-link href=#animatable-as-length-percentage-or-c
 behavior</a>:</p>
 
 <ul><li data-md=""><p><a data-link-type=dfn href=#animation-interpolation title="animation interpolation">interpolation</a>:
-as defined in <a data-biblio-type=informative data-link-type=biblio href=#css3-transitions title=biblio-CSS3-TRANSITIONS>[CSS3-TRANSITIONS]</a>.</p>
+as defined in <a data-biblio-type=informative data-link-type=biblio href=#biblio-css3-transitions title=CSS3-TRANSITIONS>[CSS3-TRANSITIONS]</a>.</p>
 <li data-md=""><p><a data-link-type=dfn href=#animation-addition title="animation addition">addition</a>:
 calc(<var>V</var><sub>a</sub> + <var>V</var><sub>b</sub>)<br>
 (Nested <code>calc()</code> functions are expanded when
 determining the computed value as defined in <a href=http://www.w3.org/TR/css3-values/#calc-computed-value>CSS
-Values and Units</a> <a data-biblio-type=normative data-link-type=biblio href=#css3val title=biblio-CSS3VAL>[CSS3VAL]</a>.)</p>
+Values and Units</a> <a data-biblio-type=normative data-link-type=biblio href=#biblio-css3val title=CSS3VAL>[CSS3VAL]</a>.)</p>
 <li data-md=""><p><a data-link-type=dfn href=#distance-computation title="distance computation">distance computation</a>: as with <a data-link-type=dfn href=#animatable-as-real-number title="animatable as real number">animatable as real
 number</a> but using the <a href=http://www.w3.org/TR/CSS2/cascade.html#used-value>used
-value</a> <a data-biblio-type=normative data-link-type=biblio href=#css21 title=biblio-CSS21>[CSS21]</a> for <var>V</var><sub>start</sub> and
+value</a> <a data-biblio-type=normative data-link-type=biblio href=#biblio-css21 title=CSS21>[CSS21]</a> for <var>V</var><sub>start</sub> and
 <var>V</var><sub>end</sub>.</p>
 </ul>
 <h5 class="heading settled" data-level=4.1.3.5 id=animatable-as-color-section><span class=secno>4.1.3.5 </span><span class=content>Animatable as color</span><a class=self-link href=#animatable-as-color-section></a></h5>
@@ -3437,7 +3437,7 @@ value</a> <a data-biblio-type=normative data-link-type=biblio href=#css21 title=
 the following <a data-link-type=dfn href=#animation-behavior title="animation behavior">animation behavior</a>:</p>
 
 <ul><li data-md=""><p><a data-link-type=dfn href=#animation-interpolation title="animation interpolation">interpolation</a>:
-as defined in <a data-biblio-type=informative data-link-type=biblio href=#css3-transitions title=biblio-CSS3-TRANSITIONS>[CSS3-TRANSITIONS]</a>.</p>
+as defined in <a data-biblio-type=informative data-link-type=biblio href=#biblio-css3-transitions title=CSS3-TRANSITIONS>[CSS3-TRANSITIONS]</a>.</p>
 <li data-md=""><p><a data-link-type=dfn href=#animation-addition title="animation addition">addition</a>:
 as with <a data-link-type=dfn href=#animatable-as-real-number title="animatable as real number">animatable as real number</a> but performed on each
 RGBA color component in premultiplied space.</p>
@@ -3518,7 +3518,7 @@ list<a class=self-link href=#animatable-as-transform-list></a></dfn> has the fol
 
 <ul><li data-md=""><p><a data-link-type=dfn href=#animation-interpolation title="animation interpolation">interpolation</a>:
 as defined in <a href=http://www.w3.org/TR/css3-transforms/#interpolation-of-transforms>Interpolation
-of Transforms</a> <a data-biblio-type=informative data-link-type=biblio href=#css3-transforms title=biblio-CSS3-TRANSFORMS>[CSS3-TRANSFORMS]</a>.</p>
+of Transforms</a> <a data-biblio-type=informative data-link-type=biblio href=#biblio-css3-transforms title=CSS3-TRANSFORMS>[CSS3-TRANSFORMS]</a>.</p>
 
 <li data-md=""><p><a data-link-type=dfn href=#animation-addition title="animation addition">addition</a>: performed by
 concatenating transform lists as
@@ -3590,7 +3590,7 @@ by other specifications.
 For example, properties with using the &lt;image&gt; type are
 animated using the interpolation behavior defined in <a href=http://dev.w3.org/csswg/css-images-4/#interpolation>CSS Image
 Values and Replaced Content</a>
-<a data-biblio-type=informative data-link-type=biblio href=#css4-images title=biblio-CSS4-IMAGES>[CSS4-IMAGES]</a>.</p>
+<a data-biblio-type=informative data-link-type=biblio href=#biblio-css4-images title=CSS4-IMAGES>[CSS4-IMAGES]</a>.</p>
 
 <div class=issue id=issue-2b25d150><a class=self-link href=#issue-2b25d150></a>
 
@@ -3823,7 +3823,7 @@ property</a> is applied using the following process.</p>
 
 <ol><li data-md=""><p>Calculate the <var>base value</var> of the property as
 the value generated for that property by computing the <a href=http://www.w3.org/TR/CSS2/cascade.html#used-value>used
-value</a> <a data-biblio-type=normative data-link-type=biblio href=#css21 title=biblio-CSS21>[CSS21]</a> for that property in the absence of the
+value</a> <a data-biblio-type=normative data-link-type=biblio href=#biblio-css21 title=CSS21>[CSS21]</a> for that property in the absence of the
 <a data-link-type=dfn href=#animation-stylesheet title="animation stylesheet">animation stylesheet</a>.</p>
 <li data-md=""><p>Establish the <a data-link-type=dfn href=#animation-stack title="animation stack">animation stack</a> for the property (see <a data-section="" href=#the-animation-stack>§4.2.1 The animation stack</a>).</p>
 <li data-md=""><p>Calculate the <a data-link-type=dfn href=#composited-value title="composited value">composited value</a> of the <a data-link-type=dfn href=#animation-stack title="animation stack">animation
@@ -3840,7 +3840,7 @@ For each attribute that has a specific <a data-link-type=dfn href=#animation-beh
 associated with it, an attribute value to use when the attribute is
 not specified or in error must be defined, referred to as the
 <dfn data-dfn-type=dfn data-noexport="" id=lacuna-value>lacuna value<a class=self-link href=#lacuna-value></a></dfn>.
-For example, SVG2 (<a data-biblio-type=informative data-link-type=biblio href=#svg2 title=biblio-SVG2>[SVG2]</a>) defines <a href=http://www.w3.org/TR/SVG2/intro.html#TermLacunaValue>lacunae
+For example, SVG2 (<a data-biblio-type=informative data-link-type=biblio href=#biblio-svg2 title=SVG2>[SVG2]</a>) defines <a href=http://www.w3.org/TR/SVG2/intro.html#TermLacunaValue>lacunae
 values</a> for its attributes.</p>
 
 <p>The <a data-link-type=dfn href=#composited-value title="composited value">composited value</a> calculated for a DOM attribute <a data-link-type=dfn href=#target-property title="target property">target
@@ -4396,9 +4396,9 @@ property</a> of an <a data-link-type=dfn href=#animation-target title="animation
 a geometric curve commonly referred to as a “motion path”.</p>
 
 <p>The <dfn data-dfn-type=dfn data-noexport="" id=motion-path>motion path<a class=self-link href=#motion-path></a></dfn> of a <a data-link-type=dfn href=#motion-path-animation-effect title="motion path animation effect">motion path animation effect</a> is
-defined by an SVG Path, as specified by SVG <a data-biblio-type=normative data-link-type=biblio href=#svg2 title=biblio-SVG2>[SVG2]</a>.
+defined by an SVG Path, as specified by SVG <a data-biblio-type=normative data-link-type=biblio href=#biblio-svg2 title=SVG2>[SVG2]</a>.
 A <a data-link-type=dfn href=#motion-path title="motion path">motion path</a> consists of a list of <dfn data-dfn-type=dfn data-noexport="" id=path-command title="path command">path commands<a class=self-link href=#path-command></a></dfn> (see <a href=http://www.w3.org/TR/SVG2/paths.html#PathData>path data</a>
-<a data-biblio-type=normative data-link-type=biblio href=#svg2 title=biblio-SVG2>[SVG2]</a>).</p>
+<a data-biblio-type=normative data-link-type=biblio href=#biblio-svg2 title=SVG2>[SVG2]</a>).</p>
 
 <p>Amongst the different types of path commands, we define
 <dfn data-dfn-type=dfn data-noexport="" id=orientation-path-command title="orientation path command">orientation path commands<a class=self-link href=#orientation-path-command></a></dfn> as
@@ -4423,7 +4423,7 @@ transform in addition to any rotation generated by setting the
 
 <p>The procedure used for calculating the length of a path or
 a subsection is provided by the definition of <dfn data-dfn-type=dfn data-noexport="" id=distance-along-a-path><a href=http://www.w3.org/TR/SVG2/paths.html#DistanceAlongAPath>distance
-along a path</a><a class=self-link href=#distance-along-a-path></a></dfn> in SVG <a data-biblio-type=normative data-link-type=biblio href=#svg2 title=biblio-SVG2>[SVG2]</a>.</p>
+along a path</a><a class=self-link href=#distance-along-a-path></a></dfn> in SVG <a data-biblio-type=normative data-link-type=biblio href=#biblio-svg2 title=SVG2>[SVG2]</a>.</p>
 
 <h4 class="heading settled" data-level=4.4.2 id=spacing-motion-paths><span class=secno>4.4.2 </span><span class=content>Spacing motion paths</span><a class=self-link href=#spacing-motion-paths></a></h4>
 
@@ -5281,8 +5281,8 @@ this <a data-link-type=dfn href=#animation-node title="animation node">animation
     Note that this definition precludes the following usage since
     <code>node</code> is an <a data-link-type=dfn href=#inclusive-ancestor title="inclusive ancestor">inclusive ancestor</a> of itself:
 
-    <div><pre class="example sh_javascript">    node.before(node); // throws HierarchyRequestError
-    </pre></div>
+        <div><pre class="example sh_javascript">        node.before(node); // throws HierarchyRequestError
+        </pre></div>
 </div>
 
 <dt data-md=""><p><dfn class=idl-code data-dfn-for=AnimationNode data-dfn-type=method data-export="" id=dom-animationnode-after title=after()>
@@ -5499,9 +5499,9 @@ or equal to one is typically only useful in combination with an
 animation effect that has an <a data-link-type=dfn href=#iteration-composite-operation title="iteration composite operation">iteration composite
 operation</a> of ‘accumulate’.
 </div><p></p>
-</dl>
 
-<dl><dt data-md=""><p><dfn class=idl-code data-dfn-for=AnimationTiming data-dfn-type=attribute data-export="" id=dom-animationtiming-iterations>iterations<a class=self-link href=#dom-animationtiming-iterations></a></dfn>
+
+<dt data-md=""><p><dfn class=idl-code data-dfn-for=AnimationTiming data-dfn-type=attribute data-export="" id=dom-animationtiming-iterations>iterations<a class=self-link href=#dom-animationtiming-iterations></a></dfn>
 <span data-attribute-info="" for=AnimationTiming/iterations> of type <a data-link-type=idl-name title="unrestricted double">unrestricted double</a></span></p>
 <dd data-md=""><p>See the <code>iterations</code> member of the
 <code class=idl><a data-link-type=idl href=#dom-animationtimingreadonly title=AnimationTimingReadOnly>AnimationTimingReadOnly</a></code> interface.</p>
@@ -5704,8 +5704,8 @@ on the <code class=idl><a data-link-type=idl href=#dom-animationtiming title=Ani
 <dd data-md=""><p>Fill backwards and forwards when applied to an
 <code class=idl><a data-link-type=idl href=#dom-animationgroup title=AnimationGroup>AnimationGroup</a></code> and no fill when applied to an
 <code class=idl><a data-link-type=idl href=#dom-animation title=Animation>Animation</a></code>.</p>
-</dl>
 
+</dl>
 <h4 class="heading settled" data-level=5.8.2 id=the-playbackdirection-enumeration><span class=secno>5.8.2 </span><span class=content>The <code>PlaybackDirection</code> enumeration</span><a class=self-link href=#the-playbackdirection-enumeration></a></h4>
 
 <pre class=idl>enum <dfn class=idl-code data-dfn-type=enum data-export="" data-global-name="" id=enumdef-playbackdirection>PlaybackDirection<a class=self-link href=#enumdef-playbackdirection></a></dfn> { "normal", "reverse", "alternate", "alternate-reverse" };</pre>
@@ -6301,19 +6301,19 @@ AnimationPlayer animate(object? effect,
 whose <a data-link-type=dfn href=#animation-target title="animation target">animation target</a> is the object on which the method is
 called, and calls the <code class=idl><a data-link-for=AnimationTimeline data-link-type=idl href=#dom-animationtimeline-play title=play()>play()</a></code> method of the
 <code class=idl><a data-link-type=idl href=#dom-animationtimeline title=AnimationTimeline>AnimationTimeline</a></code> object of the <a data-link-type=dfn href=#document-timeline title="document timeline">document timeline</a> of the <a href=http://www.w3.org/TR/dom/#concept-node-document>node
-document</a> <a data-biblio-type=normative data-link-type=biblio href=#dom title=biblio-DOM>[DOM]</a> of the element passing the newly created
+document</a> <a data-biblio-type=normative data-link-type=biblio href=#biblio-dom title=DOM>[DOM]</a> of the element passing the newly created
 <code class=idl><a data-link-type=idl href=#dom-animation title=Animation>Animation</a></code> as the argument to the method.</p>
 
 <p>The following code fragment:</p>
 
-<div><pre class="example sh_javascript">var anim = elem.animate({ opacity: 0 }, 2000);
-</pre></div>
+    <div><pre class="example sh_javascript">    var anim = elem.animate({ opacity: 0 }, 2000);
+    </pre></div>
 
 <p>is equivalent to:</p>
 
-<div><pre class="example sh_javascript">var anim = new Animation(elem, { opacity: 0 }, 2000);
-elem.ownerDocument.timeline.play(anim);
-</pre></div>
+    <div><pre class="example sh_javascript">    var anim = new Animation(elem, { opacity: 0 }, 2000);
+    elem.ownerDocument.timeline.play(anim);
+    </pre></div>
 
 <p>Returns the <code class=idl><a data-link-type=idl href=#dom-animationplayer title=AnimationPlayer>AnimationPlayer</a></code> object returned by the
 <code>play</code> method of the <code class=idl><a data-link-type=idl href=#dom-animationtimeline title=AnimationTimeline>AnimationTimeline</a></code>.</p>
@@ -6548,7 +6548,7 @@ this <a data-link-type=dfn href=#animation-effect title="animation effect">anima
 </blockquote>
 
 <p><code>{ident}</code> here is an <a href=http://www.w3.org/TR/css3-values/#identifier>identifier</a>
-as defined by CSS3 Values <a data-biblio-type=normative data-link-type=biblio href=#css3val title=biblio-CSS3VAL>[CSS3VAL]</a>.</p>
+as defined by CSS3 Values <a data-biblio-type=normative data-link-type=biblio href=#biblio-css3val title=CSS3VAL>[CSS3VAL]</a>.</p>
 
 <p>The meaning of each value is as follows:</p>
 
@@ -6634,7 +6634,7 @@ an IDL keyframe or sequence of keyframes<a class=self-link href=#procedure-for-c
 <div class=switch>
 
 <dl><dt data-md=""><p>If, using the canonical definition of
-<code>Array.isArray</code> <a data-biblio-type=normative data-link-type=biblio href=#ecma-262 title=biblio-ECMA-262>[ECMA-262]</a>,
+<code>Array.isArray</code> <a data-biblio-type=normative data-link-type=biblio href=#biblio-ecma-262 title=ECMA-262>[ECMA-262]</a>,
 Array.isArray(<var>keyframeOrKeyframeList</var>) is
 true,</p>
 <dd data-md=""><p>Return the result of following the steps for <a href=http://www.w3.org/TR/WebIDL/#es-sequence>converting an
@@ -6832,7 +6832,7 @@ names and attribute names that can be animated by the
 implementation.</p>
 <li data-md=""><p>Convert each property name in <var>supported properties</var>
 to the equivalent IDL attribute by applying the <a href=http://dev.w3.org/csswg/cssom/#css-property-to-idl-attribute>CSS
-property to IDL attribute</a> algorithm <a data-biblio-type=normative data-link-type=biblio href=#cssom title=biblio-CSSOM>[CSSOM]</a>.</p>
+property to IDL attribute</a> algorithm <a data-biblio-type=normative data-link-type=biblio href=#biblio-cssom title=CSSOM>[CSSOM]</a>.</p>
 <li data-md=""><p>If the user agent supports animation of the <a class=property data-link-type=propdesc href=http://dev.w3.org/csswg/css2/visuren.html#propdef-float title=float>float</a>
 CSS property, replace "float" in
 <var>supported properties</var> with "cssFloat".</p>
@@ -6849,7 +6849,7 @@ the string "offset",</dt><p></p>
 <dd data-md=""><p>Set the <code>offset</code> member of <var>keyframe
 result</var> to the result of applying the <a href=http://www.w3.org/TR/WebIDL/#es-double>procedure for
 converting an ECMAScript value into an IDL double</a>
-<a data-biblio-type=normative data-link-type=biblio href=#webidl title=biblio-WEBIDL>[WEBIDL]</a> to the result of calling the [‌[Get]]
+<a data-biblio-type=normative data-link-type=biblio href=#biblio-webidl title=WEBIDL>[WEBIDL]</a> to the result of calling the [‌[Get]]
 internal method on <var>keyframe input</var> with property
 name "offset".</p>
 
@@ -6858,7 +6858,7 @@ the string "easing",</dt><p></p>
 <dd data-md=""><p>Set the <code>easing</code> member of <var>keyframe
 result</var> to the result of applying the <a href=http://www.w3.org/TR/WebIDL/#es-DOMString>procedure
 for converting an ECMAScript value to an IDL
-DOMString value</a> <a data-biblio-type=normative data-link-type=biblio href=#webidl title=biblio-WEBIDL>[WEBIDL]</a> with the <a href=http://www.w3.org/TR/WebIDL/#TreatNullAs>[TreatNullAs=EmptyString]</a>
+DOMString value</a> <a data-biblio-type=normative data-link-type=biblio href=#biblio-webidl title=WEBIDL>[WEBIDL]</a> with the <a href=http://www.w3.org/TR/WebIDL/#TreatNullAs>[TreatNullAs=EmptyString]</a>
 annotation in effect, to the result of calling
 the [‌[Get]] internal method of <var>keyframe
 input</var> with property name "easing".</p>
@@ -6875,7 +6875,7 @@ the string "composite",</dt><p></p>
 <dd data-md=""><p>Set the <code>composite</code> member of <var>keyframe
 result</var> to the result applying <a href=http://www.w3.org/TR/WebIDL/#es-enumeration>the
 procedure for converting an ECMAScript value to an IDL
-enumeration type</a> <a data-biblio-type=normative data-link-type=biblio href=#webidl title=biblio-WEBIDL>[WEBIDL]</a> with
+enumeration type</a> <a data-biblio-type=normative data-link-type=biblio href=#biblio-webidl title=WEBIDL>[WEBIDL]</a> with
 <a data-link-type=dfn href=#compositeoperation title=CompositeOperation>CompositeOperation</a> as the enumeration type, to
 the result of calling the [‌[Get]] internal method on
 <var>keyframe input</var> with property name "composite".</p>
@@ -6905,7 +6905,7 @@ result</var> as follows:</p>
 
 <ul><li data-md=""><p><em>member name</em>: the result of applying the
 the <a href=http://dev.w3.org/csswg/cssom/#idl-attribute-to-css-property>IDL
-attribute to CSS property</a> algorithm <a data-biblio-type=normative data-link-type=biblio href=#cssom title=biblio-CSSOM>[CSSOM]</a> to
+attribute to CSS property</a> algorithm <a data-biblio-type=normative data-link-type=biblio href=#biblio-cssom title=CSSOM>[CSSOM]</a> to
 <var>name</var> unless <var>name</var> is
 a case-sensitive match for the string "cssFloat" in
 which case use the string "float".</p>
@@ -6985,12 +6985,12 @@ parameters.</p>
 
 <p>A string may be provided specifying the path using the syntax
 for <a href=http://www.w3.org/TR/SVG2/paths.html#PathData>SVG path
-data</a> <a data-biblio-type=normative data-link-type=biblio href=#svg2 title=biblio-SVG2>[SVG2]</a>.</p>
+data</a> <a data-biblio-type=normative data-link-type=biblio href=#biblio-svg2 title=SVG2>[SVG2]</a>.</p>
 
 <p>If a string is provided, it is converted into an
 <code>SVGPathSegList</code> using the procedure defined for
 parsing <a href=http://www.w3.org/TR/SVG2/paths.html#PathData>path
-data</a> in <a data-biblio-type=normative data-link-type=biblio href=#svg2 title=biblio-SVG2>[SVG2]</a>.
+data</a> in <a data-biblio-type=normative data-link-type=biblio href=#biblio-svg2 title=SVG2>[SVG2]</a>.
 Any errors encountered in the path data cause parsing to
 cease and the path data processed up to that point to be used.</p>
 
@@ -7012,9 +7012,9 @@ dictionary are used.</p>
 
 <dl><dt data-md=""><p><dfn class=idl-code data-dfn-for=MotionPathEffect data-dfn-type=attribute data-export="" id=dom-motionpatheffect-segments>segments<a class=self-link href=#dom-motionpatheffect-segments></a></dfn>
 <span data-attribute-info="" for=MotionPathEffect/segments> of type <a data-link-type=idl-name title=SVGPathSegList>SVGPathSegList</a></span><dd data-md=""><p>The list of segments that make up the <a data-link-type=dfn href=#motion-path title="motion path">motion path</a>.</p>
-</dl>
 
-<dl><dt data-md=""><p><dfn class=idl-code data-dfn-for=MotionPathEffect data-dfn-type=attribute data-export="" id=dom-motionpatheffect-autorotate>autoRotate<a class=self-link href=#dom-motionpatheffect-autorotate></a></dfn>
+
+<dt data-md=""><p><dfn class=idl-code data-dfn-for=MotionPathEffect data-dfn-type=attribute data-export="" id=dom-motionpatheffect-autorotate>autoRotate<a class=self-link href=#dom-motionpatheffect-autorotate></a></dfn>
 <span data-attribute-info="" for=MotionPathEffect/autoRotate> of type <a data-link-type=idl-name href=#enumdef-autorotationmode title=AutoRotationMode>AutoRotationMode</a></span><dd data-md=""><p>The <a data-link-type=dfn href=#automatic-rotation-flag title="automatic rotation flag">automatic rotation flag</a> of the <a data-link-type=dfn href=#motion-path-animation-effect title="motion path animation effect">motion path animation
 effect</a>.</p>
 
@@ -7170,7 +7170,7 @@ This allows the animation effect to be removed from the old
 <h3 class="heading settled" data-level=5.22 id=extensions-to-the-document-interface><span class=secno>5.22 </span><span class=content>Extensions to the <code>Document</code> interface</span><a class=self-link href=#extensions-to-the-document-interface></a></h3>
 
 <p>The following extensions are made to the <a class=idl-code data-link-type=interface href=http://dom.spec.whatwg.org/#document title=Document>Document
-interface</a> defined in <a data-biblio-type=normative data-link-type=biblio href=#dom title=biblio-DOM>[DOM]</a>.</p>
+interface</a> defined in <a data-biblio-type=normative data-link-type=biblio href=#biblio-dom title=DOM>[DOM]</a>.</p>
 
 <pre class=idl>partial interface <a class=idl-code data-global-name="" data-link-type=interface href=http://dom.spec.whatwg.org/#document title=Document>Document</a> {
     readonly attribute <a data-link-type=idl href=#dom-animationtimeline title=AnimationTimeline>AnimationTimeline</a> <a class=idl-code data-global-name="Document<interface>/timeline<attribute>" data-link-for=Document data-link-type=attribute data-readonly="" data-type="AnimationTimeline " href=#dom-document-timeline title=timeline>timeline</a>;
@@ -7189,7 +7189,7 @@ the <a data-link-type=dfn href=#document-timeline title="document timeline">docu
 
 <p>Since DOM Elements may be the target of an animation,
 the <a class=externalDFN href=http://www.w3.org/TR/dom/#interface-element>Element</a>
-interface <a data-biblio-type=normative data-link-type=biblio href=#dom title=biblio-DOM>[DOM]</a> is extended as follows:</p>
+interface <a data-biblio-type=normative data-link-type=biblio href=#biblio-dom title=DOM>[DOM]</a> is extended as follows:</p>
 
 <pre class=idl><a data-link-type=idl href=http://dom.spec.whatwg.org/#element title=Element>Element</a> implements <a data-link-type=idl href=#dom-animatable title=Animatable>Animatable</a></pre>
 
@@ -7203,7 +7203,7 @@ interface <a data-biblio-type=normative data-link-type=biblio href=#dom title=bi
 
 <p>Since <a data-link-type=dfn href=#animation title=animations>animations</a> may also target
 pseudo-elements, the <a class=externalDFN href=http://www.w3.org/TR/cssom/#the-pseudoelement-interface><code>PseudoElement</code></a>
-interface <a data-biblio-type=normative data-link-type=biblio href=#cssom title=biblio-CSSOM>[CSSOM]</a> is also defined to be animatable.</p>
+interface <a data-biblio-type=normative data-link-type=biblio href=#biblio-cssom title=CSSOM>[CSSOM]</a> is also defined to be animatable.</p>
 
 <pre class=idl><a data-link-type=idl href=http://dev.w3.org/csswg/cssom-1/#pseudoelement title=PseudoElement>PseudoElement</a> implements <a data-link-type=idl href=#dom-animatable title=Animatable>Animatable</a></pre>
 
@@ -7234,10 +7234,10 @@ interface, the value returned when querying the
 animation’s <code>startTime</code> will reflect updated state of
 the model immediately.</p>
 
-<div><pre class="example sh_javascript">  // Initially player.src.localTime is 3000
-  player.currentTime += 2000;
-  alert(player.src.localTime); // Displays ‘5000’
-</pre></div>
+    <div><pre class="example sh_javascript">      // Initially player.src.localTime is 3000
+      player.currentTime += 2000;
+      alert(player.src.localTime); // Displays ‘5000’
+    </pre></div>
 
 <p>The same concept applies to more complex modifications of the
 Web Animations model such as adding and removing children from
@@ -7258,20 +7258,20 @@ immediately after applying a new <a data-link-type=dfn href=#animation title=Ani
 element, the result of the new animation will be
 incorporated in the value returned.</p>
 
-<div><pre class="example sh_javascript">// Set opacity to 0 immediately
-elem.animate({ opacity: 0 }, { fill: ‘forwards’ });
-alert(window.getComputedStyle(elem).opacity); // Displays ‘0’
-</pre></div>
+    <div><pre class="example sh_javascript">    // Set opacity to 0 immediately
+    elem.animate({ opacity: 0 }, { fill: ‘forwards’ });
+    alert(window.getComputedStyle(elem).opacity); // Displays ‘0’
+    </pre></div>
 
 <p>The means of querying the animated value of an attribute depends
 on the interface defined for the attribute.
-SVG 1.1 <a data-biblio-type=normative data-link-type=biblio href=#svg11 title=biblio-SVG11>[SVG11]</a> defines an additional interface for querying
+SVG 1.1 <a data-biblio-type=normative data-link-type=biblio href=#biblio-svg11 title=SVG11>[SVG11]</a> defines an additional interface for querying
 animated values.</p>
 
-<div><pre class="example sh_javascript">// Set width to 0 immediately
-rect.animate({ width: ‘100px’ }, { fill: ‘forwards’ });
-alert(rect.width.animVal.value); // Displays ‘100’
-</pre></div>
+    <div><pre class="example sh_javascript">    // Set width to 0 immediately
+    rect.animate({ width: ‘100px’ }, { fill: ‘forwards’ });
+    alert(rect.width.animVal.value); // Displays ‘100’
+    </pre></div>
 
 </div>
 
@@ -7285,17 +7285,17 @@ called.</p>
 not be called until <em>after</em> the script block has
 completed during regular sampling.</p>
 
-<div><pre class="example sh_javascript">var timesCalled = 0;
-elem.animate(function() {
-  timesCalled++;
-}, 10000);
-alert(timesCalled); // Displays ‘0’
-</pre></div>
+    <div><pre class="example sh_javascript">    var timesCalled = 0;
+    elem.animate(function() {
+      timesCalled++;
+    }, 10000);
+    alert(timesCalled); // Displays ‘0’
+    </pre></div>
 
 </div>
-</ul>
 
-<ul><li data-md=""><p>Changes to specified style, specified attribute values, and the
+
+<li data-md=""><p>Changes to specified style, specified attribute values, and the
 state of the Web Animations model made within the same execution
 block must be synchronized when rendering such that the whole set
 of changes is rendered together.</p>
@@ -7309,11 +7309,11 @@ This guarantees that the following usage will never produce
 a situation where <em>only</em> the change to specified style is
 rendered without the animation.</p>
 
-<div><pre class="example sh_javascript">// Fade the opacity with fallback for browsers that don’t
-// support Element.animate
-elem.style.opacity = ‘0&amp;rqsuo;
-elem.animate([ { opacity: 1 }, { opacity: 0 } ], 500);
-</pre></div>
+    <div><pre class="example sh_javascript">    // Fade the opacity with fallback for browsers that don’t
+    // support Element.animate
+    elem.style.opacity = ‘0&amp;rqsuo;
+    elem.animate([ { opacity: 1 }, { opacity: 0 } ], 500);
+    </pre></div>
 
 <p>Note that a user agent may render a frame with <em>none</em> of
 the changes made in a script execution block.
@@ -7333,16 +7333,16 @@ a <a data-link-type=dfn href=#document-timeline title="document timeline">docume
 a long block of code that is executed in the same script block
 will return the same value as shown in the following example.</p>
 
-<div><pre class="example sh_javascript">var a = document.timeline.currentTime;
-// ... many lines of code ...
-var b = document.timeline.currentTime;
-alert(b - a); // Displays 0
-</pre></div>
+    <div><pre class="example sh_javascript">    var a = document.timeline.currentTime;
+    // ... many lines of code ...
+    var b = document.timeline.currentTime;
+    alert(b - a); // Displays 0
+    </pre></div>
 
 </div>
 
 <li data-md=""><p>User agents that support Timing control for script-based
-animations <a data-biblio-type=informative data-link-type=biblio href=#animation-timing title=biblio-ANIMATION-TIMING>[ANIMATION-TIMING]</a>, prior to <a class=externalDFN href=http://www.w3.org/TR/animation-timing/#dfn-sample-all-animations>sampling animation frame request
+animations <a data-biblio-type=informative data-link-type=biblio href=#biblio-animation-timing title=ANIMATION-TIMING>[ANIMATION-TIMING]</a>, prior to <a class=externalDFN href=http://www.w3.org/TR/animation-timing/#dfn-sample-all-animations>sampling animation frame request
 callbacks</a> for a given <a class=externalDFN href=http://www.w3.org/TR/html5/browsers.html#top-level-browsing-context>top-level browsing context</a>,
 must perform a <a data-link-type=dfn href=#single-sample title=single-sample>sample</a> including 
 executing any eligible
@@ -7363,23 +7363,23 @@ context.</p>
 a <code>requestAnimationFrame</code> callback acts as
 an alias for <code>document.timeline.currentTime</code>.</p>
 
-<div><pre class="example sh_javascript">window.requestAnimationFrame(function(sampleTime) {
-  // Displays ‘0’
-  alert(sampleTime - document.timeline.currentTime);
-});
-</pre></div>
+    <div><pre class="example sh_javascript">    window.requestAnimationFrame(function(sampleTime) {
+      // Displays ‘0’
+      alert(sampleTime - document.timeline.currentTime);
+    });
+    </pre></div>
 
 </div>
-</ul>
 
+</ul>
 <h2 class="heading settled" data-level=6 id=integration-with-media-fragments><span class=secno>6 </span><span class=content>Integration with Media Fragments</span><a class=self-link href=#integration-with-media-fragments></a></h2>
 
-<p>The Media Fragments specification <a data-biblio-type=normative data-link-type=biblio href=#media-frags title=biblio-MEDIA-FRAGS>[MEDIA-FRAGS]</a> defines a means
+<p>The Media Fragments specification <a data-biblio-type=normative data-link-type=biblio href=#biblio-media-frags title=MEDIA-FRAGS>[MEDIA-FRAGS]</a> defines a means
 for addressing a temporal range of a media resource.
 The application of media fragments depends on the MIME type of the
 resource on which they are specified.
 For resources with the <a class=externalDFN href=http://www.w3.org/TR/SVG/intro.html#MIMEType>SVG MIME type</a>
-<a data-biblio-type=normative data-link-type=biblio href=#svg11 title=biblio-SVG11>[SVG11]</a>, the application of temporal parameters is defined in the <a href=http://dev.w3.org/fxtf/web-animations/animation-elements.html>
+<a data-biblio-type=normative data-link-type=biblio href=#biblio-svg11 title=SVG11>[SVG11]</a>, the application of temporal parameters is defined in the <a href=http://dev.w3.org/fxtf/web-animations/animation-elements.html>
 Animation elements</a> specification.</p>
 
 <p class=note>Note: media fragments are defined to operate on resources based on
@@ -7394,7 +7394,7 @@ Animation elements</a> specification.</p>
 <a class=externalDFN href=http://www.w3.org/TR/html51/browsers.html#session-history-entry>session
 history entry</a> so that as a user navigates between pages, the
 previous state of the page can be restored including state such as
-scroll position <a data-biblio-type=informative data-link-type=biblio href=#html5 title=biblio-HTML5>[HTML5]</a>.</p>
+scroll position <a data-biblio-type=informative data-link-type=biblio href=#biblio-html5 title=HTML5>[HTML5]</a>.</p>
 
 
 <p>User agents that pause and resume <a class=externalDFN href=http://www.w3.org/TR/html51/embedded-content-0.html#media-element>media
@@ -7514,7 +7514,7 @@ Document conventions</span><a class=self-link href=#conventions></a></h3>
     letters in this specification.
 
     <p>All of the text of this specification is normative except sections
-    explicitly marked as non-normative, examples, and notes. <a data-biblio-type=normative data-link-type=biblio href=#rfc2119 title=biblio-RFC2119>[RFC2119]</a></p>
+    explicitly marked as non-normative, examples, and notes. <a data-biblio-type=normative data-link-type=biblio href=#biblio-rfc2119 title=RFC2119>[RFC2119]</a></p>
 
     <p>Examples in this specification are introduced with the words "for example"
     or are set apart from the normative text with <code>class="example"</code>,
