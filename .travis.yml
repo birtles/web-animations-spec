@@ -12,6 +12,8 @@ script:
 env:
   global:
   - TRAVIS_COMMIT_MSG="$(git log --format=%B --no-merges -n 1)"
+  - COMMIT_USER="$(git log --format=%an --no-merges -n 1)"
+  - COMMIT_EMAIL="$(git log --format=%ae --no-merges -n 1)"
   - secure: ci7u4e9jCqBDXzCQhofbroGWhKMvCDuM4sPQeLk8FfufRQxSZGIrtrhRddrsXSxSZA51G7umB12/guzeWgSnST10K2cNnW+2l8IDXBcDfocxnL7iuMZWFN5oKbV0LwtjWZEZkVshNJz4GbZV/SWqR/Qpl9MCPBaWWwy+AmSPbMs=
   - secure: dA2uWiB626DLz6e3CLN3/7pYHzT9fUlgobLI+6GRLUCOYhrLG0gPqm8ZoBU2t/N27pHZX076csALDwegvIXXluEK8QkMl25scwuXH1b5TbHDahioeX+jYSY4ibgN7/Q1b5oFUwdLLScf6HfdZIjgllli674moDpyt5Vz1obmNJI=
   - secure: FrZ/DtlUzO7pOj24zFv712v9Z0Oa+HqPSeuOwIuQ/1OfHHFNL6f/9wpgWyAG3WrsIwplYgVPEzq6VL3xf/5zSFgAaAVpEgSbcMytnBADsKWmBBE4RoX6RWGyOUNMgQhIbzCGydISqn2tPKyLs3MAvhYfL1ETNCvFDYdHS+vkzQM=

@@ -14,6 +14,8 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; th
   echo "$REPO.git"
   echo "$TRAVIS_COMMIT_RANGE"
   echo "$TRAVIS_REPO_SLUG"
+  echo "$COMMIT_USER"
+  echo "$COMMIT_EMAIL"
 
   git remote set-url origin $REPO.git
   git config --global user.name "webanimbot"
