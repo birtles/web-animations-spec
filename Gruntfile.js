@@ -71,6 +71,21 @@ module.exports = function(grunt) {
     }
   });
 
+  // Use token if available and push to https URL
+  if (process.env.GH_TOKEN && process.env.TRAVIS_REPO_SLUG) {
+    grunt.config.merge({
+      'gh-pages': {
+        spec: {
+          options: {
+            repo: 'https://' + process.env.GH_TOKEN + '@github.com/'
+                  + process.env.TRAVIS_REPO_SLUG + '.git',
+            silent: true
+          }
+        }
+      }
+    });
+  }
+
   grunt.registerTask('default', ['shell:build']);
   grunt.registerTask('build', ['shell:build']);
   grunt.registerTask('publish', ['copy:spec']);
