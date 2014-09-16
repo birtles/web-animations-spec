@@ -11,6 +11,7 @@ grunt build || error_exit "Error building spec"
 if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
   grunt publish || error_exit "Error publishing spec"
 
+  git remote set-url origin $REPO.git
   git config --global user.name "webanimbot"
   git config --global user.email "webanimbot@gmail.com"
 
