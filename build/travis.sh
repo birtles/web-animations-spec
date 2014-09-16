@@ -14,7 +14,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; th
   git config --global user.name "$COMMIT_USER (via Travis CI)"
   git config --global user.email "$COMMIT_EMAIL"
 
-  export COMMIT_MESSAGE=$(echo -e "$TRAVIS_COMMIT_MESSAGE\n\nGenerated from:\n";
+  export COMMIT_MESSAGE=$(echo -e "$TRAVIS_COMMIT_MSG\n\nGenerated from:\n";
                           git log $TRAVIS_COMMIT_RANGE)
   echo "$COMMIT_MESSAGE"
 
